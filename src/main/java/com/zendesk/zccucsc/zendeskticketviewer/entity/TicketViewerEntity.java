@@ -12,10 +12,8 @@ import java.util.List;
 public class TicketViewerEntity {
     Meta meta;
     Links links;
-
+    List<Ticket> tickets;
     public List<Ticket> getTickets() {
         return tickets;
     }
-
-    List<Ticket> tickets;
 }

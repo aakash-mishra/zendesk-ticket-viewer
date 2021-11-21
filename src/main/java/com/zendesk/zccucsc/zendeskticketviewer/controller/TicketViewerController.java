@@ -1,5 +1,7 @@
 package com.zendesk.zccucsc.zendeskticketviewer.controller;
 
+import com.zendesk.zccucsc.zendeskticketviewer.entity.Ticket;
+import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketDetailEntity;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketViewerEntity;
 import com.zendesk.zccucsc.zendeskticketviewer.service.TicketViewerService;
 import org.apache.logging.log4j.LogManager;
@@ -27,7 +29,10 @@ public class TicketViewerController {
     }
 
     @RequestMapping("/tickets/{id}")
-    public void getTicketById(@PathVariable("id") String id) {
+    public TicketDetailEntity getTicketById(@PathVariable("id") String id) {
+        LOG.info("Inside " + BASE_CLASS + " -> getTicketById");
+        TicketDetailEntity entity = ticketViewerService.getTicketById(id);
+        return entity;
 
     }
 

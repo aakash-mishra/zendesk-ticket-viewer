@@ -2,6 +2,8 @@ package com.zendesk.zccucsc.zendeskticketviewer.gateway;
 
 import com.zendesk.zccucsc.zendeskticketviewer.config.Constants;
 import com.zendesk.zccucsc.zendeskticketviewer.config.Util;
+import com.zendesk.zccucsc.zendeskticketviewer.entity.Ticket;
+import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketDetailEntity;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketViewerEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,7 +31,8 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
     private static final Logger LOG = LogManager.getLogger(TicketViewerGatewayImpl.class);
     private final String BASE_CLASS = "TicketViewerGatewayImpl";
 
-    public TicketViewerEntity getTicketPage(String pageSize) {
+    @Override
+    public TicketViewerEntity getTickets(String pageSize) {
         ResponseEntity<TicketViewerEntity> response = null;
         try {
             LOG.info("Entered " + " " + BASE_CLASS + "-> getTicketPage");
@@ -39,8 +42,24 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
             return ticketViewerEntity;
         }
         catch (Exception e) {
-            LOG.error("Exception occurred while fetching ticket list. Status code: ");
-            //TBD - add exception
+            LOG.error("Exception occurred while fetching ticket list.");
+            //TODO - add exception
+            return null;
+        }
+    }
+
+    @Override
+    public TicketDetailEntity getTicketById(String ticketId) {
+        ResponseEntity<TicketDetailEntity> response = null;
+        try {
+            LOG.info("Entered " + " " + BASE_CLASS + "-> getTicketById");
+            String url = TICKETS_BASE_URL + "/" + ticketId;
+            response = restTemplate.exchange(url, HttpMethod.GET, setHeaders(), TicketDetailEntity.class);TicketDetailEntity ticketViewerEntity = response.getBody();
+            return ticketViewerEntity;
+        }
+        catch (Exception e) {
+            LOG.error("Exception occurred while fetching ticket by id.");
+            //TODO - add exception
             return null;
         }
     }
@@ -53,6 +72,8 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
         HttpEntity<String> request = new HttpEntity<>(httpHeaders);
         return request;
     }
+
+
 
 
 
