@@ -1,0 +1,312 @@
+2021-11-20 22:23:25.249  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52436 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:23:25.257  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:23:25.866  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:23:25.923  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:23:25.923  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:23:25.923  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:23:25.923  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:23:25.923  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:23:25.923  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:23:25.924  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:23:26.029  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:23:26.252  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:23:26.261  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:23:26.261  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:23:26.261  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:23:26.339  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:23:26.339  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1036 ms
+2021-11-20 22:23:26.396  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:23:26.398  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:23:26.402  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:23:26.411  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:23:26.411  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:23:26.411  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:23:26.412  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:23:26.412  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:23:26.414  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:23:26.711  INFO --- o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:23:26.732  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:23:26.740  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 1.832 seconds (JVM running for 2.583)
+2021-11-20 22:23:33.198  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-20 22:23:33.199  INFO --- o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-11-20 22:23:33.199  INFO --- o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2021-11-20 22:23:33.218  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:23:36.109  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:23:37.022  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
+2021-11-20 22:24:39.643  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:24:40.866  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:24:51.352  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
+2021-11-20 22:26:30.233  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52450 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:26:30.243  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:26:30.892  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:26:30.947  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:26:30.947  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:26:30.948  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:26:30.948  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:26:30.948  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:26:30.948  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:26:30.948  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:26:31.058  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:26:31.301  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:26:31.310  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:26:31.311  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:26:31.311  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:26:31.370  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:26:31.370  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1079 ms
+2021-11-20 22:26:31.421  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:26:31.424  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:26:31.428  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:26:31.437  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:26:31.437  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:26:31.437  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:26:31.438  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:26:31.438  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:26:31.440  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:26:31.751  INFO --- o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:26:31.773  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:26:31.782  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 1.93 seconds (JVM running for 2.691)
+2021-11-20 22:26:34.549  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-20 22:26:34.549  INFO --- o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-11-20 22:26:34.550  INFO --- o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-11-20 22:26:34.569  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:26:34.569  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:26:34.569  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
+2021-11-20 22:27:50.199  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52470 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:27:50.207  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:27:50.824  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:27:50.883  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:27:50.883  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:27:50.883  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:27:50.883  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:27:50.883  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:27:50.884  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:27:50.884  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:27:50.995  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:27:51.229  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:27:51.239  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:27:51.239  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:27:51.240  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:27:51.319  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:27:51.319  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
+2021-11-20 22:27:51.375  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:27:51.377  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:27:51.382  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:27:51.391  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:27:51.392  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:27:51.392  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:27:51.392  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:27:51.393  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:27:51.394  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:27:51.703  INFO --- o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:27:51.724  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:27:51.733  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 1.868 seconds (JVM running for 2.641)
+2021-11-20 22:28:08.187  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-20 22:28:08.188  INFO --- o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-11-20 22:28:08.189  INFO --- o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-11-20 22:28:08.206  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:28:08.207  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:28:08.207  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
+2021-11-20 22:28:37.876  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52472 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:28:37.886  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:28:38.543  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:28:38.610  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:28:38.611  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:28:38.611  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:28:38.611  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:28:38.611  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:28:38.611  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:28:38.611  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:28:38.715  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:28:38.958  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:28:38.968  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:28:38.969  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:28:38.969  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:28:39.037  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:28:39.037  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+2021-11-20 22:28:39.089  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:28:39.092  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:28:39.096  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:28:39.105  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:28:39.106  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:28:39.106  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:28:39.107  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:28:39.107  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:28:39.109  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:28:39.437  INFO --- o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:28:39.459  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:28:39.469  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 1.951 seconds (JVM running for 2.761)
+2021-11-20 22:28:43.145  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-20 22:28:43.145  INFO --- o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-11-20 22:28:43.146  INFO --- o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2021-11-20 22:28:43.165  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:28:43.165  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:28:43.165  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
+2021-11-20 22:31:49.708  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52485 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:31:49.717  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:31:50.361  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:31:50.414  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:31:50.414  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:31:50.415  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:31:50.415  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:31:50.415  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:31:50.415  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:31:50.415  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:31:50.524  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:31:50.750  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:31:50.759  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:31:50.760  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:31:50.760  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:31:50.820  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:31:50.820  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1055 ms
+2021-11-20 22:31:50.871  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:31:50.873  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:31:50.877  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:31:50.887  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:31:50.887  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:31:50.887  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:31:50.887  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:31:50.888  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:31:50.889  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:31:51.183  INFO --- o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:31:51.203  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:31:51.212  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 1.85 seconds (JVM running for 2.707)
+2021-11-20 22:32:40.764  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-20 22:32:40.764  INFO --- o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-11-20 22:32:40.765  INFO --- o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-11-20 22:32:40.784  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:32:40.784  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:32:40.784  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
+2021-11-20 22:43:26.740  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52547 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:43:26.747  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:43:27.267  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:43:27.311  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:43:27.311  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:43:27.311  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:43:27.311  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:43:27.312  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:43:27.312  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:43:27.312  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:43:27.412  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:43:27.630  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:43:27.637  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:43:27.638  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:43:27.638  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:43:27.690  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:43:27.690  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 906 ms
+2021-11-20 22:43:27.735  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:43:27.738  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:43:27.741  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:43:27.749  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:43:27.749  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:43:27.749  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:43:27.750  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:43:27.750  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:43:27.751  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:43:28.008  INFO --- o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:43:28.026  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:43:28.033  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 1.577 seconds (JVM running for 2.504)
+2021-11-20 22:43:51.030  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-20 22:43:51.030  INFO --- o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-11-20 22:43:51.031  INFO --- o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-11-20 22:43:51.047  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:43:51.047  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:43:51.047  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
+2021-11-20 22:43:51.854 ERROR --- c.z.z.z.g.TicketViewerGatewayImpl        : Exception occurred while fetching ticket list. Status code: 
+2021-11-20 22:44:35.698  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52556 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:44:35.707  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:44:36.266  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:44:36.317  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:44:36.317  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:44:36.317  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:44:36.317  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:44:36.318  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:44:36.318  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:44:36.318  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:44:36.403  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:44:36.599  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:44:36.606  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:44:36.607  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:44:36.607  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:44:36.665  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:44:36.665  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 910 ms
+2021-11-20 22:44:36.711  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:44:36.713  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:44:36.716  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:44:36.725  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:44:36.726  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:44:36.726  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:44:36.726  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:44:36.726  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:44:36.728  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:44:37.003  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:44:37.010  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 1.624 seconds (JVM running for 2.387)
+2021-11-20 22:44:49.582  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52559 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:44:49.591  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:44:50.188  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:44:50.238  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:44:50.238  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:44:50.238  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:44:50.238  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:44:50.239  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:44:50.239  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:44:50.239  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:44:50.326  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:44:50.540  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:44:50.548  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:44:50.549  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:44:50.549  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:44:50.623  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:44:50.623  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 987 ms
+2021-11-20 22:44:50.675  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:44:50.678  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:44:50.681  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:44:50.690  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:44:50.690  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:44:50.690  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:44:50.690  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:44:50.691  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:44:50.692  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:44:50.984  INFO --- o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:44:51.005  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:44:51.012  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 1.753 seconds (JVM running for 2.528)
+2021-11-20 22:44:56.596  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-20 22:44:56.598  INFO --- o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-11-20 22:44:56.599  INFO --- o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-11-20 22:44:56.620  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:44:56.620  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:44:56.620  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
+2021-11-20 22:46:28.214  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Starting ZendeskTicketViewerApplication using Java 14.0.1 on MacBook-Pro-44.local with PID 52566 (/Users/aakash/aakash/Zendesk/zendesk-ticket-viewer/build/classes/java/main started by aakash in /Users/aakash/aakash/Zendesk/zendesk-ticket-viewer)
+2021-11-20 22:46:28.224  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : No active profile set, falling back to default profiles: default
+2021-11-20 22:46:28.983  INFO --- ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2021-11-20 22:46:29.058  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-11-20 22:46:29.058  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:46:29.058  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:46:29.059  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:46:29.059  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2021-11-20 22:46:29.059  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-11-20 22:46:29.059  INFO --- c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.properties]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-11-20 22:46:29.181  INFO --- c.u.j.f.DefaultLazyPropertyFilter        : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2021-11-20 22:46:29.444  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-11-20 22:46:29.453  INFO --- o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:46:29.453  INFO --- o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-20 22:46:29.454  INFO --- o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-20 22:46:29.520  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-20 22:46:29.520  INFO --- w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1241 ms
+2021-11-20 22:46:29.579  INFO --- c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-11-20 22:46:29.581  INFO --- c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-11-20 22:46:29.585  INFO --- c.u.j.e.DefaultLazyEncryptor             : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-11-20 22:46:29.597  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2021-11-20 22:46:29.597  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2021-11-20 22:46:29.597  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2021-11-20 22:46:29.598  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2021-11-20 22:46:29.598  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-11-20 22:46:29.600  INFO --- c.u.j.e.DefaultLazyEncryptor             : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2021-11-20 22:46:29.958  INFO --- o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-11-20 22:46:29.981  INFO --- o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-11-20 22:46:30.003  INFO --- c.z.z.z.ZendeskTicketViewerApplication   : Started ZendeskTicketViewerApplication in 2.17 seconds (JVM running for 3.089)
+2021-11-20 22:46:32.710  INFO --- o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-20 22:46:32.710  INFO --- o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-11-20 22:46:32.711  INFO --- o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2021-11-20 22:46:32.731  INFO --- c.z.z.z.c.TicketViewerController         : Inside TicketViewerController -> getTickets
+2021-11-20 22:46:32.731  INFO --- c.z.z.z.s.TicketViewerServiceImpl        : Entered  TicketViewerServiceImpl-> getAllTickets
+2021-11-20 22:46:32.732  INFO --- c.z.z.z.g.TicketViewerGatewayImpl        : Entered  TicketViewerGatewayImpl-> getTicketPage
