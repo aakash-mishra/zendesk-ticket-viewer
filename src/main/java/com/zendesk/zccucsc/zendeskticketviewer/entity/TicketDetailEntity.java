@@ -7,7 +7,4 @@ import lombok.Setter;
 @Setter
 public class TicketDetailEntity {
     Ticket ticket;
-    public Ticket getTicket() {
-        return ticket;
-    }
 }

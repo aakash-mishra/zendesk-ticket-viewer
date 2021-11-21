@@ -7,6 +7,6 @@ import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketViewerEntity;
 import java.util.List;
 
 public interface TicketViewerGateway {
-    TicketViewerEntity getTickets(String pageSize);
+    TicketViewerEntity getTickets(String url);
     TicketDetailEntity getTicketById(String ticketId);
 }

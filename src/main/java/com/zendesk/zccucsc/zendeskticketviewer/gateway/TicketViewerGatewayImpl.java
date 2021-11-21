@@ -32,11 +32,10 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
     private final String BASE_CLASS = "TicketViewerGatewayImpl";
 
     @Override
-    public TicketViewerEntity getTickets(String pageSize) {
+    public TicketViewerEntity getTickets(String url) {
         ResponseEntity<TicketViewerEntity> response = null;
         try {
             LOG.info("Entered " + " " + BASE_CLASS + "-> getTicketPage");
-            String url = TICKETS_BASE_URL + "?page[size]=" + pageSize;
             response = restTemplate.exchange(url, HttpMethod.GET, setHeaders(), TicketViewerEntity.class);
             TicketViewerEntity ticketViewerEntity = response.getBody();
             return ticketViewerEntity;
