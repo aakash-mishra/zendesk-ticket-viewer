@@ -1,6 +1,5 @@
 package com.zendesk.zccucsc.zendeskticketviewer.controller;
 
-import com.zendesk.zccucsc.zendeskticketviewer.entity.Ticket;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketDetailEntity;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketViewerEntity;
 import com.zendesk.zccucsc.zendeskticketviewer.service.TicketViewerService;

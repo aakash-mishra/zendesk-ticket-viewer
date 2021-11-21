@@ -28,6 +28,7 @@ public class Driver implements CommandLineRunner {
         Scanner scanner = new Scanner(System.in);
         do {
             System.out.print("\nEnter option (1, 2, 3 or 'menu'): ");
+            System.out.println("------------------------------------");
             String choice = scanner.nextLine();
             switch(choice) {
                 case "1":
@@ -38,15 +39,23 @@ public class Driver implements CommandLineRunner {
                             System.out.println(ticket.id + " " + ticket.subject);
                         }
                         if(!ticketViewerEntity.getMeta().getHas_more()) {
-                            System.out.println("No more tickets to display.");
+                            System.out.println("No more tickets to display. Select '1' to go back to the first page");
                         }
+                    }
+                    else {
+                        System.out.println("Something went wrong. The downstream API might be unavailable. Please try again in some time.");
                     }
                     break;
                 case "2":
                     System.out.print("Enter ticket id: ");
                     String ticketId = scanner.nextLine();
                     TicketDetailEntity ticketDetails = ticketViewerController.getTicketById(ticketId);
-                    System.out.println(ticketDetails.getTicket().id + "---" + ticketDetails.getTicket().subject);
+                    if(ticketDetails != null) {
+                        System.out.println(ticketDetails.getTicket().id + "---" + ticketDetails.getTicket().subject);
+                    }
+                    else {
+                        System.out.println("Something went wrong. The downstream API might be unavailable. Please try again in some time.");
+                    }
                     break;
                 case "3":
                     System.out.println("Exiting application. Thank you for using Zendesk Ticket Viewer");

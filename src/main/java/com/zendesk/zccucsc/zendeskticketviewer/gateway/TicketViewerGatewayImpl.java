@@ -1,8 +1,6 @@
 package com.zendesk.zccucsc.zendeskticketviewer.gateway;
 
-import com.zendesk.zccucsc.zendeskticketviewer.config.Constants;
 import com.zendesk.zccucsc.zendeskticketviewer.config.Util;
-import com.zendesk.zccucsc.zendeskticketviewer.entity.Ticket;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketDetailEntity;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketViewerEntity;
 import org.apache.logging.log4j.LogManager;
@@ -15,6 +13,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+
 import static com.zendesk.zccucsc.zendeskticketviewer.config.Constants.*;
 
 @Component
@@ -42,7 +41,6 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
         }
         catch (Exception e) {
             LOG.error("Exception occurred while fetching ticket list.");
-            //TODO - add exception
             return null;
         }
     }
@@ -58,7 +56,6 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
         }
         catch (Exception e) {
             LOG.error("Exception occurred while fetching ticket by id.");
-            //TODO - add exception
             return null;
         }
     }
