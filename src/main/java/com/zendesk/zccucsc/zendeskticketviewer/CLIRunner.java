@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import java.util.Scanner;
 
 @Component
-public class Driver implements CommandLineRunner {
+public class CLIRunner implements CommandLineRunner {
     @Autowired
     TicketViewerController ticketViewerController;
     @Autowired
@@ -66,7 +66,7 @@ public class Driver implements CommandLineRunner {
                     System.out.println("3. Exit");
                     break;
                 default:
-                    System.out.println("Please input a valid choice (1, 2 or 3)");
+                    System.out.println("Please input a valid choice (1, 2 or 3). Type 'menu' to see the menu options again");
             }
         } while (true);
     }

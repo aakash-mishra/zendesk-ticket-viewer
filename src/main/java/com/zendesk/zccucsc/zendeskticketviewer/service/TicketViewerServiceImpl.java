@@ -37,4 +37,9 @@ public class TicketViewerServiceImpl implements TicketViewerService {
         TicketDetailEntity ticketViewerEntity = ticketViewerGateway.getTicketById(ticketId);
         return ticketViewerEntity;
     }
+
+    //to test if nextUrl is being set correctly
+    public String getNextUrl() {
+        return this.nextUrl;
+    }
 }
