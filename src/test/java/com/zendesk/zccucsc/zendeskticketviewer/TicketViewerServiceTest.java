@@ -1,6 +1,5 @@
 package com.zendesk.zccucsc.zendeskticketviewer;
 
-import com.zendesk.zccucsc.zendeskticketviewer.config.Constants;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketViewerEntity;
 import com.zendesk.zccucsc.zendeskticketviewer.gateway.TicketViewerGateway;
 import com.zendesk.zccucsc.zendeskticketviewer.service.TicketViewerServiceImpl;
@@ -11,11 +10,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static com.zendesk.zccucsc.zendeskticketviewer.config.Constants.TICKETS_BASE_URL;
+import static com.zendesk.zccucsc.zendeskticketviewer.TestEntity.getMockTicketViewerEntity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.anyString;
-import static com.zendesk.zccucsc.zendeskticketviewer.TestEntity.*;
 
 @ExtendWith(MockitoExtension.class)
 class TicketViewerServiceTest {
