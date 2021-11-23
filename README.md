@@ -10,6 +10,6 @@
     
 * **Usage Guide**
     1. To run the CLI application, first build the gradle project. You can read more about gradle builds [here](https://spring.io/guides/gs/gradle/). A convenient way to build projects is using gradle wrapper (gradlew). From within the project directory, open up a terminal and issue the command `./gradlew build`. This will create necessary artefacts and place it in `build\libs` directory. To keep things simple, I have not implemented auto-versioning of builds for now and all exported jars will be called `zendesk-ticket-viewer-0.0.1-SNAPSHOT.jar`. You can customize this in `build.gradle`.
-    2. Once the project is built, you can run the application using `java -jar` command: `java -Djasypt.encryptor.password={your_secret_key} -jar build/libs/zendesk-ticket-viewer-0.0.1-SNAPSHOT.jar`  
+    2. Once the project is built, you can run it using `java -jar` command: `java -Djasypt.encryptor.password={your_secret_key} -jar build/libs/zendesk-ticket-viewer-0.0.1-SNAPSHOT.jar`  
     The `-Djasypt.encryptor.password` is a runtime argument that we are providing for jasypt to decrypt encrypted properties at runtime. Replace `{your_secret_key}` with your own secret key that you used while encrypting credentials in step 1 of the Installation Guide
     3. The project is now ready to use from the command line.

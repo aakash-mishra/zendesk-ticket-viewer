@@ -9,9 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 public class TicketViewerEntity {
-    @JsonProperty("meta")
     Meta meta;
-    @JsonProperty("links")
     Links links;
     List<Ticket> tickets;
 }
