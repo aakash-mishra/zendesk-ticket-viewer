@@ -28,15 +28,15 @@ public class CLIRunner implements CommandLineRunner {
         Scanner scanner = new Scanner(System.in);
         do {
             System.out.print("\nEnter option (1, 2, 3 or 'menu'): ");
-            System.out.println("------------------------------------");
             String choice = scanner.nextLine();
             switch(choice) {
                 case "1":
-                    System.out.println("ID Subject");
+                    System.out.println("\tTicket ID \tSubject \t\t\tDate Created");
+                    System.out.println("\t----------------------------------------------------------");
                     TicketViewerEntity ticketViewerEntity = ticketViewerController.getTickets();
                     if(ticketViewerEntity != null && ticketViewerEntity.getTickets() != null) {
                         for(Ticket ticket : ticketViewerEntity.getTickets()) {
-                            System.out.println(ticket.id + " " + ticket.subject);
+                            System.out.println("\t"+ticket.id + " \t" + ticket.subject + " \t" + ticket.created_at);
                         }
                         if(!ticketViewerEntity.getMeta().getHas_more()) {
                             System.out.println("No more tickets to display. Select '1' to go back to the first page");
@@ -51,7 +51,12 @@ public class CLIRunner implements CommandLineRunner {
                     String ticketId = scanner.nextLine();
                     TicketDetailEntity ticketDetails = ticketViewerController.getTicketById(ticketId);
                     if(ticketDetails != null) {
-                        System.out.println(ticketDetails.getTicket().id + "---" + ticketDetails.getTicket().subject);
+                        Ticket ticket = ticketDetails.getTicket();
+                        System.out.println("\tTicket ID is: " + ticket.id);
+                        System.out.println("\tTicket subject is: " + ticket.subject);
+                        System.out.println("\tTicket description is: " + ticket.description);
+                        System.out.println("\tTicket was created on: " + ticket.created_at);
+                        System.out.println("\tCurrent status of ticket is: " + ticket.status);
                     }
                     else {
                         System.out.println("Something went wrong. The downstream API might be unavailable. Please try again in some time.");
