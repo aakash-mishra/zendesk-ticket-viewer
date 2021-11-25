@@ -1,13 +1,11 @@
 package com.zendesk.zccucsc.zendeskticketviewer;
 
-import com.zendesk.zccucsc.zendeskticketviewer.controller.TicketViewerController;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.Ticket;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketDetailEntity;
 import com.zendesk.zccucsc.zendeskticketviewer.entity.TicketViewerEntity;
+import com.zendesk.zccucsc.zendeskticketviewer.service.TicketViewerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
@@ -15,9 +13,7 @@ import java.util.Scanner;
 @Component
 public class CLIRunner implements CommandLineRunner {
     @Autowired
-    TicketViewerController ticketViewerController;
-    @Autowired
-    private ConfigurableApplicationContext context;
+    private TicketViewerService ticketViewerService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -33,7 +29,7 @@ public class CLIRunner implements CommandLineRunner {
                 case "1":
                     System.out.println("\tTicket ID \tSubject \t\t\tDate Created");
                     System.out.println("\t----------------------------------------------------------");
-                    TicketViewerEntity ticketViewerEntity = ticketViewerController.getTickets();
+                    TicketViewerEntity ticketViewerEntity = ticketViewerService.getAllTickets();
                     if(ticketViewerEntity != null && ticketViewerEntity.getTickets() != null) {
                         for(Ticket ticket : ticketViewerEntity.getTickets()) {
                             System.out.println("\t"+ticket.id + " \t" + ticket.subject + " \t" + ticket.created_at);
@@ -49,7 +45,7 @@ public class CLIRunner implements CommandLineRunner {
                 case "2":
                     System.out.print("Enter ticket id: ");
                     String ticketId = scanner.nextLine();
-                    TicketDetailEntity ticketDetails = ticketViewerController.getTicketById(ticketId);
+                    TicketDetailEntity ticketDetails = ticketViewerService.getTicketById(ticketId);
                     if(ticketDetails != null) {
                         Ticket ticket = ticketDetails.getTicket();
                         System.out.println("\tTicket ID is: " + ticket.id);
@@ -64,7 +60,7 @@ public class CLIRunner implements CommandLineRunner {
                     break;
                 case "3":
                     System.out.println("Exiting application. Thank you for using Zendesk Ticket Viewer");
-                    System.exit(SpringApplication.exit(context));
+                    throw new Exception("User exited the app.");
                 case "menu":
                     System.out.println("1. View all tickets (25 tickets per page)");
                     System.out.println("2. Select ticket by id");
