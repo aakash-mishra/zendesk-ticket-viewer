@@ -12,6 +12,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import static com.zendesk.zccucsc.zendeskticketviewer.config.Constants.*;
@@ -39,9 +41,13 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
             TicketViewerEntity ticketViewerEntity = response.getBody();
             return ticketViewerEntity;
         }
-        catch (Exception e) {
-            LOG.error("Exception occurred while fetching ticket list.");
-            return null;
+        catch(HttpClientErrorException e) {
+            LOG.error("Client error occurred (4xx) with message: " + e.getMessage());
+            throw e;
+        }
+        catch (HttpServerErrorException e) {
+            LOG.error("Server error occurred (5xx) with message: " + e.getMessage());
+            throw e;
         }
     }
 
@@ -51,12 +57,18 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
         try {
             LOG.info("Entered " + " " + BASE_CLASS + "-> getTicketById");
             String url = TICKETS_BASE_URL + "/" + ticketId;
-            response = restTemplate.exchange(url, HttpMethod.GET, setHeaders(), TicketDetailEntity.class);TicketDetailEntity ticketViewerEntity = response.getBody();
+            response = restTemplate.exchange(url, HttpMethod.GET, setHeaders(), TicketDetailEntity.class);
+
+            TicketDetailEntity ticketViewerEntity = response.getBody();
             return ticketViewerEntity;
         }
-        catch (Exception e) {
-            LOG.error("Exception occurred while fetching ticket by id.");
-            return null;
+        catch(HttpClientErrorException e) {
+            LOG.error("Client error occurred (4xx) with message: " + e.getMessage());
+            throw e;
+        }
+        catch (HttpServerErrorException e) {
+            LOG.error("Server error occurred (5xx) with message: " + e.getMessage());
+            throw e;
         }
     }
 
@@ -68,9 +80,5 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
         HttpEntity<String> request = new HttpEntity<>(httpHeaders);
         return request;
     }
-
-
-
-
 
 }

@@ -10,10 +10,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
 
 import static com.zendesk.zccucsc.zendeskticketviewer.TestEntity.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.anyString;
 
 @ExtendWith(MockitoExtension.class)
@@ -23,12 +25,21 @@ class TicketViewerServiceTest {
     @InjectMocks
     TicketViewerServiceImpl ticketViewerService;
 
+
     @Test
-    public void getAllTickets_nullResponse() {
-        Mockito.when(ticketViewerGateway.getTickets(anyString())).thenReturn(null);
-        TicketViewerEntity actualResponse = ticketViewerService.getAllTickets();
-        assertNull(actualResponse);
+    public void getAllTickets_clientError() {
+        Mockito.when(ticketViewerGateway.getTickets(anyString())).
+                thenThrow(new HttpClientErrorException(HttpStatus.NOT_FOUND));
+        assertThrows(HttpClientErrorException.class, () -> {ticketViewerService.getAllTickets();});
     }
+
+    @Test
+    public void getAllTickets_serverError() {
+        Mockito.when(ticketViewerGateway.getTickets(anyString())).
+                thenThrow(new HttpServerErrorException(HttpStatus.INTERNAL_SERVER_ERROR));
+        assertThrows(HttpServerErrorException.class, () -> {ticketViewerService.getAllTickets();});
+    }
+
 
     @Test
     public void getAllTickets_hasMore_true() {
@@ -56,9 +67,19 @@ class TicketViewerServiceTest {
     }
 
     @Test
-    public void getTicketById_null() {
-        Mockito.when(ticketViewerGateway.getTicketById(anyString())).thenReturn(null);
-        TicketDetailEntity actualResponse = ticketViewerService.getTicketById("1");
-        assertNull(actualResponse);
+    public void getTicketById_clientError() {
+        Mockito.when(ticketViewerService.getTicketById(anyString())).
+                thenThrow(new HttpClientErrorException(HttpStatus.NOT_FOUND));
+        assertThrows(HttpClientErrorException.class, () ->
+                                        {ticketViewerService.getTicketById("1");});
     }
+
+    @Test
+    public void getTicketById_serverError() {
+        Mockito.when(ticketViewerService.getTicketById(anyString())).
+                thenThrow(new HttpClientErrorException(HttpStatus.NOT_FOUND));
+        assertThrows(HttpClientErrorException.class, () -> {ticketViewerService.getTicketById("1");});
+    }
+
+
 }

@@ -23,9 +23,9 @@ public class TicketViewerServiceImpl implements TicketViewerService {
     public TicketViewerEntity getAllTickets() {
         LOG.info("Entered " + " " + BASE_CLASS + "-> getAllTickets");
         TicketViewerEntity ticketViewerEntity = ticketViewerGateway.getTickets(nextUrl);
-        if(ticketViewerEntity != null && ticketViewerEntity.getMeta().getHas_more())
+        if(ticketViewerEntity.getMeta().getHas_more())
             nextUrl = TICKETS_BASE_URL + "?page[size]=" + Constants.PAGE_SIZE + "&page[after]=" + ticketViewerEntity.getMeta().getAfter_cursor();
-        else if (ticketViewerEntity != null && !ticketViewerEntity.getMeta().getHas_more()) {
+        else {
             LOG.info("No more results to display. Setting cursor back to first page");
             nextUrl = TICKETS_BASE_URL + "?page[size]=" + Constants.PAGE_SIZE;
         }
