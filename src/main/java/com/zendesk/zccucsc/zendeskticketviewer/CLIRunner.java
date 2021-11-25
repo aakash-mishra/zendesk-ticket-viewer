@@ -24,7 +24,7 @@ public class CLIRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Welcome to Zendesk Ticket Viewer Service. Please select an option from the menu below. At any point, if you would like to see the menu options again, just type 'menu'. ");
         System.out.println("1. View all tickets (25 tickets per page)");
-        System.out.println("2. Select ticket by id");
+        System.out.println("2. View ticket details by id");
         System.out.println("3. Exit");
         Scanner scanner = new Scanner(System.in);
         boolean shouldContinue = true;
@@ -42,7 +42,10 @@ public class CLIRunner implements CommandLineRunner {
                                 System.out.println("\t" + ticket.id + " \t" + ticket.subject + " \t" + ticket.created_at);
                             }
                             if (!ticketViewerEntity.getMeta().getHas_more()) {
-                                System.out.println("No more tickets to display. Select '1' to go back to the first page");
+                                System.out.println("\nNo more tickets to display. Select '1' to go back to the first page");
+                            }
+                            else {
+                                System.out.println("\nThere are more tickets to display. Select '1' to view the next page");
                             }
                         }
                         else {
@@ -65,13 +68,13 @@ public class CLIRunner implements CommandLineRunner {
                     }
                     try {
                         TicketDetailEntity ticketDetails = ticketViewerService.getTicketById(ticketId);
-                        //assumption: ticketViewerService will either return a ticket or throw an exception (it will never be null)
+                        //ticketViewerService will either return a ticket or throw an exception (it will never be null)
                         Ticket ticket = ticketDetails.getTicket();
-                        System.out.println("\tTicket ID is: " + ticket.id);
-                        System.out.println("\tTicket subject is: " + ticket.subject);
-                        System.out.println("\tTicket description is: " + ticket.description);
+                        System.out.println("\tTicket ID: " + ticket.id);
+                        System.out.println("\tSubject of the ticket: " + ticket.subject.trim());
+                        System.out.println("\tTicket description: " + ticket.description.trim());
                         System.out.println("\tTicket was created on: " + ticket.created_at);
-                        System.out.println("\tCurrent status of ticket is: " + ticket.status);
+                        System.out.println("\tCurrent status of ticket: " + ticket.status);
                         break;
                     }
                     catch (HttpClientErrorException e) {
@@ -89,7 +92,7 @@ public class CLIRunner implements CommandLineRunner {
 
                 case "menu":
                     System.out.println("1. View all tickets (25 tickets per page)");
-                    System.out.println("2. Select ticket by id");
+                    System.out.println("2. View ticket details by id");
                     System.out.println("3. Exit");
                     break;
                 default:

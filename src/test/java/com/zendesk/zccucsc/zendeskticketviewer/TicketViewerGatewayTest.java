@@ -11,18 +11,17 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.*;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import static com.zendesk.zccucsc.zendeskticketviewer.TestEntity.getMockTicketDetailEntity;
 import static com.zendesk.zccucsc.zendeskticketviewer.TestEntity.getMockTicketViewerEntity;
-import static com.zendesk.zccucsc.zendeskticketviewer.config.Constants.*;
-import static org.junit.jupiter.api.Assertions.*;
-import static com.zendesk.zccucsc.zendeskticketviewer.TestEntity.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.anyString;
 
 @ExtendWith(MockitoExtension.class)
@@ -30,9 +29,10 @@ public class TicketViewerGatewayTest {
     @Mock
     RestTemplate restTemplate;
     @Mock
-    Util util;
+    private Util util;
     @InjectMocks
     TicketViewerGatewayImpl ticketViewerGateway;
+
 
     @Test
     public void testGetTickets_ok() {
