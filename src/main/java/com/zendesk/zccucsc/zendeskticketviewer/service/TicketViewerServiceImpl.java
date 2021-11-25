@@ -21,19 +21,19 @@ public class TicketViewerServiceImpl implements TicketViewerService {
 
     @Override
     public TicketViewerEntity getAllTickets() {
-        LOG.info("Entered " + " " + BASE_CLASS + "-> getAllTickets");
+        LOG.debug("Entered " + " " + BASE_CLASS + "-> getAllTickets");
         TicketViewerEntity ticketViewerEntity = ticketViewerGateway.getTickets(nextUrl);
         if(ticketViewerEntity.getMeta().getHas_more())
             nextUrl = TICKETS_BASE_URL + "?page[size]=" + Constants.PAGE_SIZE + "&page[after]=" + ticketViewerEntity.getMeta().getAfter_cursor();
         else {
-            LOG.info("No more results to display. Setting cursor back to first page");
+            LOG.debug("No more results to display. Setting cursor back to first page");
             nextUrl = TICKETS_BASE_URL + "?page[size]=" + Constants.PAGE_SIZE;
         }
         return ticketViewerEntity;
     }
     @Override
     public TicketDetailEntity getTicketById(String ticketId) {
-        LOG.info("Entered " + " " + BASE_CLASS + "-> getTicketById");
+        LOG.debug("Entered " + " " + BASE_CLASS + "-> getTicketById");
         TicketDetailEntity ticketViewerEntity = ticketViewerGateway.getTicketById(ticketId);
         return ticketViewerEntity;
     }

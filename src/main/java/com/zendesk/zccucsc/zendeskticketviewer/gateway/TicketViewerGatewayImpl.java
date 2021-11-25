@@ -36,7 +36,7 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
     public TicketViewerEntity getTickets(String url) {
         ResponseEntity<TicketViewerEntity> response = null;
         try {
-            LOG.info("Entered " + " " + BASE_CLASS + "-> getTicketPage");
+            LOG.debug("Entered " + " " + BASE_CLASS + "-> getTicketPage");
             response = restTemplate.exchange(url, HttpMethod.GET, setHeaders(), TicketViewerEntity.class);
             TicketViewerEntity ticketViewerEntity = response.getBody();
             return ticketViewerEntity;
@@ -55,7 +55,7 @@ public class TicketViewerGatewayImpl implements TicketViewerGateway {
     public TicketDetailEntity getTicketById(String ticketId) {
         ResponseEntity<TicketDetailEntity> response = null;
         try {
-            LOG.info("Entered " + " " + BASE_CLASS + "-> getTicketById");
+            LOG.debug("Entered " + " " + BASE_CLASS + "-> getTicketById");
             String url = TICKETS_BASE_URL + "/" + ticketId;
             response = restTemplate.exchange(url, HttpMethod.GET, setHeaders(), TicketDetailEntity.class);
 
