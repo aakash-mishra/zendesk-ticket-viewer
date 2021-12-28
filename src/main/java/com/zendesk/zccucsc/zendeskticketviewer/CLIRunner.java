@@ -16,12 +16,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Component
-public class CLIRunner implements CommandLineRunner {
+//public class CLIRunner implements CommandLineRunner {
+public class CLIRunner {
     @Autowired
     private TicketViewerService ticketViewerService;
 
-    @Override
-    public void run(String... args) throws Exception {
+//    @Override
+    public void run2(String... args) throws Exception {
         System.out.println("Welcome to Zendesk Ticket Viewer Service. Please select an option from the menu below. At any point, if you would like to see the menu options again, just type 'menu'. ");
         System.out.println("1. View all tickets (25 tickets per page)");
         System.out.println("2. View ticket details by id");
