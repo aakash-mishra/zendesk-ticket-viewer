@@ -62,7 +62,7 @@ public class CLIRunner implements CommandLineRunner {
                 case "2":
                     System.out.print("Enter ticket id: ");
                     String ticketId = scanner.nextLine();
-                    if(!validateTicketId(ticketId)) {
+                    if(!isValidTicketId(ticketId)) {
                         System.out.println("Please enter a valid ticket id.");
                         continue;
                     }
@@ -102,7 +102,7 @@ public class CLIRunner implements CommandLineRunner {
         System.out.println("Thank you for using Zendesk Ticket Viewer.");
     }
 
-    private boolean validateTicketId(String ticketId) {
+    private boolean isValidTicketId(String ticketId) {
         Pattern pattern = Pattern.compile("^[0-9]*$");
         Matcher matcher = pattern.matcher(ticketId);
         return matcher.find();
